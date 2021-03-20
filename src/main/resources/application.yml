@@ -1,0 +1,23 @@
+
+server:
+  port: 9100
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:todolist # h2 daabase 連接位址
+    driver-class-name: org.h2.Driver #配置driver
+    username: sa
+    password: 123
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/    # 設定去templates資料夾找html檔案
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5    
